@@ -1,9 +1,35 @@
 {
   "name": "ai-new-digest",
   "version": "1.0.0",
+  "description": "AI 新闻聚合 CLI 工具 — 从多个 RSS 源抓取最新 AI 资讯，生成 Markdown 日报",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "ai-new-digest": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "output/.gitkeep"
+  ],
   "scripts": {
-    "start": "tsx src/index.ts"
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "news",
+    "rss",
+    "cli",
+    "digest",
+    "artificial-intelligence"
+  ],
+  "license": "MIT",
+  "author": "shoukunliao",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoukunliao/ai-new-digest.git"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"
